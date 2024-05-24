@@ -5,12 +5,12 @@ const PORT = 3000;
 
 app.use(express.json());
 
-// Serve static files from the "public" directory
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 // In-memory storage for tasks
-let tasks = []; // Array to store task objects
-let currentId = 1; // Variable to keep track of the next task ID
+let tasks = []; 
+let currentId = 1; 
 
 // GET /tasks: Retrieve a list of all tasks
 app.get('/tasks', (req, res) => {
