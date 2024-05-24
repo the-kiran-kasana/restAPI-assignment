@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .task {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Task Manager</h1>
+    <div>
+        <input type="text" id="title" placeholder="Title" />
+        <input type="text" id="description" placeholder="Description" />
+        <button onclick="createTask()">Add Task</button>
+    </div>
+    <h2>Tasks</h2>
+    <div id="tasks"></div>
+    <script src="app.js"></script>
+</body>
+</html>
