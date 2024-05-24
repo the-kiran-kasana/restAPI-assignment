@@ -12,6 +12,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 let tasks = []; 
 let currentId = 1; 
 
+
 // GET /tasks: Retrieve a list of all tasks
 app.get('/tasks', (req, res) => {
     res.status(200).json(tasks);
@@ -28,6 +29,7 @@ app.get('/tasks/:id', (req, res) => {
         res.status(404).json({ message: 'Task not found' });
     }
 });
+
 
 // POST /tasks: Create a new task
 app.post('/tasks', (req, res) => {
@@ -46,6 +48,7 @@ app.post('/tasks', (req, res) => {
     tasks.push(newTask);
     res.status(201).json(newTask);
 });
+
 
 // PUT /tasks/:id: Update an existing task by ID
 app.put('/tasks/:id', (req, res) => {
@@ -66,6 +69,7 @@ app.put('/tasks/:id', (req, res) => {
     }
 });
 
+
 // DELETE /tasks/:id: Delete a task by ID
 app.delete('/tasks/:id', (req, res) => {
     const taskId = parseInt(req.params.id);
@@ -79,6 +83,7 @@ app.delete('/tasks/:id', (req, res) => {
         res.status(404).json({ message: 'Task not found' });
     }
 });
+
 
 // Start the server
 app.listen(PORT, () => {

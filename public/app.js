@@ -40,6 +40,7 @@ async function createTask() {
     }
 }
 
+
 async function deleteTask(id) {
     const response = await fetch(`/tasks/${id}`, {
         method: 'DELETE',
@@ -51,5 +52,6 @@ async function deleteTask(id) {
         alert('Failed to delete task');
     }
 }
+
 
 document.addEventListener('DOMContentLoaded', fetchTasks);
