@@ -15,6 +15,7 @@ async function fetchTasks() {
     });
 }
 
+
 async function createTask() {
     const title = document.getElementById('title').value;
     const description = document.getElementById('description').value;
