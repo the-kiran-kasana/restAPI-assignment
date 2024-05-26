@@ -19,12 +19,20 @@
 <body>
     <h1>Task Manager</h1>
     <div>
+        <input type="hidden" id="taskId" />
         <input type="text" id="title" placeholder="Title" />
         <input type="text" id="description" placeholder="Description" />
-        <button onclick="createTask()">Add Task</button>
+        <button onclick="createOrUpdateTask()">Save Task</button>
+        <button onclick="clearForm()">Clear</button>
     </div>
     <h2>Tasks</h2>
     <div id="tasks"></div>
     <script src="app.js"></script>
 </body>
 </html>
+
+
+
+
+
+
